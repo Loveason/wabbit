@@ -3,8 +3,8 @@ package amqp
 import (
 	"errors"
 
-	"github.com/NeowayLabs/wabbit"
-	"github.com/NeowayLabs/wabbit/utils"
+	"github.com/loveason/wabbit"
+	"github.com/loveason/wabbit/utils"
 	"github.com/streadway/amqp"
 )
 
@@ -172,6 +172,12 @@ func (ch *Channel) exchangeDeclare(name, kind string, passive bool, opt wabbit.O
 		return ch.Channel.ExchangeDeclarePassive(name, kind, durable, autoDelete, internal, noWait, args)
 	}
 	return ch.Channel.ExchangeDeclare(name, kind, durable, autoDelete, internal, noWait, args)
+}
+
+func (ch *Channel) Get(queue string, autoAck bool) (msg wabbit.Delivery, ok bool, err error) {
+	amqpd, ok, err := ch.Channel.Get(queue, autoAck)
+	msg = &Delivery{&amqpd}
+	return
 }
 
 func (ch *Channel) QueueUnbind(name, route, exchange string, _ wabbit.Option) error {

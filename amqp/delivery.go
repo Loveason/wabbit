@@ -1,7 +1,7 @@
 package amqp
 
 import (
-	"github.com/NeowayLabs/wabbit"
+	"github.com/loveason/wabbit"
 	"github.com/streadway/amqp"
 )
 

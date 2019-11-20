@@ -6,8 +6,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/NeowayLabs/wabbit"
-	"github.com/NeowayLabs/wabbit/utils"
+	"github.com/loveason/wabbit"
+	"github.com/loveason/wabbit/utils"
 	"github.com/streadway/amqp"
 )
 
@@ -61,6 +61,10 @@ func NewChannel(vhost *VHost) *Channel {
 	}
 
 	return &c
+}
+
+func (ch *Channel) Get(queue string, autoAck bool) (msg wabbit.Delivery, ok bool, err error) {
+	return
 }
 
 func (ch *Channel) Confirm(noWait bool) error {

@@ -3,7 +3,7 @@ package server
 import (
 	"testing"
 
-	"github.com/NeowayLabs/wabbit"
+	"github.com/loveason/wabbit"
 )
 
 func TestVHostWithDefaults(t *testing.T) {

@@ -26,6 +26,7 @@ type (
 		Cancel(consumer string, noWait bool) error
 		ExchangeDeclare(name, kind string, opt Option) error
 		ExchangeDeclarePassive(name, kind string, opt Option) error
+		Get(queue string, autoAck bool) (msg Delivery, ok bool, err error)
 		QueueDeclare(name string, args Option) (Queue, error)
 		QueueDeclarePassive(name string, args Option) (Queue, error)
 		QueueDelete(name string, args Option) (int, error)

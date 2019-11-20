@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/NeowayLabs/wabbit"
-	"github.com/NeowayLabs/wabbit/amqptest/server"
-	"github.com/NeowayLabs/wabbit/utils"
+	"github.com/loveason/wabbit"
+	"github.com/loveason/wabbit/amqptest/server"
+	"github.com/loveason/wabbit/utils"
 	"github.com/pborman/uuid"
 )
 

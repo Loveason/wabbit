@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/NeowayLabs/wabbit"
-	"github.com/NeowayLabs/wabbit/amqptest/server"
+	"github.com/loveason/wabbit"
+	"github.com/loveason/wabbit/amqptest/server"
 	"github.com/pborman/uuid"
 )
 
